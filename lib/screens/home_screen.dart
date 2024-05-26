@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:zoom_2/resources/auth_methods.dart';
+import 'package:zoom_2/screens/history_meeting_screen.dart';
+import 'package:zoom_2/screens/meeting_screen.dart';
 // import 'package:zoom_2/screens/history_meeting_screen.dart';
 // import 'package:zoom_2/screens/meeting_screen.dart';
 import 'package:zoom_2/utils/colors.dart';
@@ -21,14 +23,14 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
-  // List<Widget> pages = [
-  //   MeetingScreen(),
-  //   const HistoryMeetingScreen(),
-  //   const Text('Contacts'),
-  //   CustomButton(text: 'Log Out', onPressed: () => AuthMethods().signOut()),
-  // ];
+  List<Widget> pages = [
+    MeetingScreen(),
+    const HistoryMeetingScreen(),
+    const Text('Contacts'),
+    CustomButton(text: 'Log Out', onPressed: () => AuthMethods().signOut()),
+  ];
 
-  @override
+  @override 
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -37,45 +39,8 @@ class _HomeScreenState extends State<HomeScreen> {
         title: const Text('Meet & Chat'),
         centerTitle: true,
       ),
-      // body: pages[_page],
-      body: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              HomeMeetingButton(
-                onPressed: (){},
-                text:'New Meeting',
-                icon: Icons.videocam,
-                ),
-                HomeMeetingButton(
-                onPressed: (){},
-                text:'Join Meeting',
-                icon: Icons.add_box_rounded,
-                ),
-                HomeMeetingButton(
-                onPressed: (){},
-                text:'Schedule',
-                icon: Icons.calendar_today,
-                ),
-                HomeMeetingButton(
-                onPressed: (){},
-                text:'Share screen',
-                icon: Icons.arrow_upward_rounded,
-                ),
-            ],
-          ),
-          const Expanded(
-            child: Center(
-              child: Text('Create/Join meetings with just a click!',
-              style:TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 18,
-              )),
-              ),
-              ),
-        ],
-      ),
+      body: pages[_page],
+       
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: footerColor,
         selectedItemColor: Colors.white,
