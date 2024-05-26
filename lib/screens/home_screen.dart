@@ -2,11 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:zoom_2/resources/auth_methods.dart';
 import 'package:zoom_2/screens/history_meeting_screen.dart';
 import 'package:zoom_2/screens/meeting_screen.dart';
-// import 'package:zoom_2/screens/history_meeting_screen.dart';
-// import 'package:zoom_2/screens/meeting_screen.dart';
 import 'package:zoom_2/utils/colors.dart';
 import 'package:zoom_2/widgets/custom_button.dart';
-import 'package:zoom_2/widgets/home_meeting_button.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -34,8 +31,8 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: backgroundColor,
-        elevation: 0,
+        // backgroundColor: backgroundColor,
+        // elevation: 0,
         title: const Text('Meet & Chat'),
         centerTitle: true,
       ),
@@ -47,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
         unselectedItemColor: Colors.grey,
         onTap: onPageChanged,
         currentIndex: _page,
-        type: BottomNavigationBarType.fixed,
+        // type: BottomNavigationBarType.fixed,
         unselectedFontSize: 14,
         items: const [
           BottomNavigationBarItem(

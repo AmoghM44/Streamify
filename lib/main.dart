@@ -5,21 +5,13 @@ import 'package:zoom_2/screens/home_screen.dart';
 import 'package:zoom_2/screens/login_screen.dart';
 import 'package:zoom_2/screens/video_call_screen.dart';
 import 'package:zoom_2/utils/colors.dart';
-import 'firebase_options.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   runApp(const MyApp());
 }
-// Future firebaseInitalise()async{
-//   WidgetsFlutterBinding.ensureInitialized();
-//   await Firebase.initializeApp();
-// }
-// void main() { // async has to be used
-//   firebaseInitalise();
-//   runApp(MyApp());
-// }
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -28,7 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Zoom_2',
+      title: 'STREAMIFY',
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: backgroundColor,
       ),

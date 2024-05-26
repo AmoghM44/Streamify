@@ -1,9 +1,8 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:zoom_2/resources/jitsi_meet_methods.dart';
 import 'package:zoom_2/widgets/home_meeting_button.dart';
-import 'package:zoom_2/widgets/home_meeting_button.dart';
+
 
 class MeetingScreen extends StatelessWidget {
   MeetingScreen({Key? key}) : super(key: key);
@@ -53,7 +52,7 @@ class MeetingScreen extends StatelessWidget {
         const Expanded(
           child: Center(
             child: Text(
-              'Create/Join Meetings with just a click!',
+              '                        STREAMIFY\nCreate/Join Meetings with just a click!',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 18,
